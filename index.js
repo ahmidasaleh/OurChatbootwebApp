@@ -3,7 +3,6 @@ const bodyparser=require("body-parser");
 const request=require("request");
 
 const app=express();
-//const api_url="https://graph.facebook.com/v18.0/me/messenger_profile?access_token=<PAGE_ACCESS_TOKEN>";
 const page_access_token= "EAAFhwOZB3uaMBO1NzlkGHOHsjZAIZCR9ZAzFMl5K9V6ZBZC44urAcGqzbdCs2M8bydGes5CsqU81FNBjSzhnC7D5ifiXY5mYpc7IIUj0iY1uzcrysZB5F9CzQQQzYER9AZBYAx0VPePau3oNM4g0l7PIBuhiLl2impivEfpAhLBLXHCZCCZB97ZBperwzNsfHUAZBqEC2y5hZBLSZAsGjyftgm";
 app.set("port",(process.env.PORT || 8000));
 app.use(bodyparser.urlencoded({ extended:false}));
