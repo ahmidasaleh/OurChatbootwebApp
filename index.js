@@ -39,16 +39,16 @@ request(
 
         url:"https://graph.facebook.com/v18.0/me/messenger_profile?access_token="+page_access_token,
         method:"POST",
-        headers:{"content-type":"application/json"},
+        headers:{"Content-Type":"application/json"},
         form:data
     },
     function(error,response,body){
-        console.log(response)
-        console.log(body)
+        console.log(response);
+        console.log(body);
     }
 );
 });
 app.listen(app.get("port"),function(){
-    console.log("server is running and  listen on port "+app.get("port"))
+    console.log("server is running and  listen on port "+app.get("port"));
 }
 );
