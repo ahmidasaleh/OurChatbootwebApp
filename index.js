@@ -21,7 +21,7 @@ app.get("/webhook",function(req,res){
         res.status(200).send(challenge);    
     }
     else
-    { res.status(403).}
+    { res.status(403)}
 });
 app.listen(app.get("port"),function(){
     console.log("server is running and  listen on port "+app.get("port"))
