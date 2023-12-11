@@ -9,9 +9,8 @@ app.set("port",(process.env.PORT || 8000));
 app.use(bodyparser.urlencoded({ extended:false}));
 app.use(bodyparser.json());
 
-app.get("/",function(req,res){
-    res.send("hey ,  i'm just fff dggsdfsfssfsfd")
-});
+res.send("Done")
+
 
 app.get("/webhook",function(req,res){
     //let mode = req.query["hub.mode"];
