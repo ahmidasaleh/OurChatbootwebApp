@@ -8,7 +8,7 @@ app.set("port",(process.env.PORT || 8000));
 app.use(bodyparser.urlencoded({ extended:false}));
 app.use(bodyparser.json());
 
-res.send("Done")
+
 
 
 app.get("/webhook",function(req,res){
