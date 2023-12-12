@@ -27,6 +27,7 @@ app.get("/webhook",function(req,res){
 app.get("/setup",function(req,res){
     setupegreetingtext();
     setupgetstartedbutton(); 
+    setuppersistent_menu();
 res.send("Done");
 });
 
