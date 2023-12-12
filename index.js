@@ -55,8 +55,8 @@ function setupgetstartedbutton()
 function setuppersistent_menu()
 {
     var data={
-        {
-            "persistent_menu": [
+        
+         "persistent_menu": [
                 {
                     "locale": "default",
                     "composer_input_disabled": false,
@@ -80,7 +80,7 @@ function setuppersistent_menu()
                     ]
                 }
             ]
-        }
+        
     };
     
     request(
