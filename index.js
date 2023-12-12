@@ -25,29 +25,58 @@ app.get("/webhook",function(req,res){
 });
 
 app.get("/setup",function(req,res){
-var data={
-    "greeting":[
-        {
-          "locale":"default",
-          "text":"مرحبا بكم في BOOTCHAT!"
-        }
-      ]
-};
-
-request(
-    {
-
-        url:"https://graph.facebook.com/v18.0/me/messenger_profile?access_token="+page_access_token,
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        form:data
-    },
-    function(error,response,body){
-        console.log(response);
-        console.log(body);
-    }
-);
+    setupegreetingtext();
+    setupgetstartedbutton(); 
+res.send("Done");
 });
+
+function setupgetstartedbutton()
+{
+    var data={
+        "get_started": {"payload": "postback_payload"}
+    };
+    
+    request(
+        {
+    
+            url:"https://graph.facebook.com/v18.0/me/messenger_profile?access_token="+page_access_token,
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            form:data
+        },
+        function(error,response,body){
+            console.log(response);
+            console.log(body);
+        }
+    );
+     
+}
+
+function setupegreetingtext(){
+    var data={
+        "greeting":[
+            {
+              "locale":"default",
+              "text":"مرحبا بكم في BOOTCHAT!"
+            }
+          ]
+    };
+    
+    request(
+        {
+    
+            url:"https://graph.facebook.com/v18.0/me/messenger_profile?access_token="+page_access_token,
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            form:data
+        },
+        function(error,response,body){
+            console.log(response);
+            console.log(body);
+        }
+    );
+    
+}
 app.listen(app.get("port"),function(){
     console.log("server is running and  listen on port "+app.get("port"));
 }
