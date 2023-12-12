@@ -75,7 +75,7 @@ function setuppersistent_menu()
                         {
                             "type": "web_url",
                             "title": "Shop now",
-                            "url": "https://www.originalcoastclothing.com/",
+                            "url": "https://www.facebook.com/Renadshop",
                             "webview_height_ratio": "full"
                         }
                     ]
