@@ -29,7 +29,7 @@ var data={
     "greeting":[
         {
           "locale":"default",
-          "text":"Hello!"
+          "text":"مرحبا بكم في BOOTCHAT!"
         }
       ]
 };
